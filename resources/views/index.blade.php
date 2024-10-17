@@ -113,11 +113,10 @@
         url: '/index/' + id,
         method: 'GET',
         success: function(data) {
-          $('#modal-name').text(data.name);
-          $('#modal-description').text(data.description);
+          $('#modal-name').text(data.nama);
+          $('#modal-description').text(data.desc);
           $('#modal-price').text('Rp. ' + new Intl.NumberFormat().format(data.price));
-          $('#modal-image').attr('src', '{{ asset('
-            ') }}' + data.image);
+          $('#modal-image').attr('src', '{{ asset(' ') }}' + data.img);
           $('#menuModal').modal('show');
         },
         error: function() {
