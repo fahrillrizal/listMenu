@@ -22,11 +22,11 @@
           <div class="box">
             <div>
               <div class="img-box">
-                <img src="{{ asset('storage/menu/' . $menu->image) }}" alt="">
+                <img src="{{ asset('storage/menu/' . $menu->img) }}" alt="">
               </div>
               <div class="detail-box">
-                <h5>{{ $menu->name }}</h5>
-                <p>{{ $menu->description }}</p>
+                <h5>{{ $menu->nama }}</h5>
+                <p>{{ $menu->desc }}</p>
                 <div class="options">
                   <h6>Rp. {{ number_format($menu->price, 0, ',', '.') }}</h6>
                   <a href="#" class="btn-info" data-id="{{ $menu->id }}">
@@ -48,14 +48,14 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="menuModalLabel{{ $menu->id }}">{{ $menu->name }}</h5>
+            <h5 class="modal-title" id="menuModalLabel{{ $menu->id }}">{{ $menu->nama }}</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <img src="{{ asset('storage/menu/' . $menu->image) }}" alt="{{ $menu->name }}" class="img-fluid mb-3">
-            <p>{{ $menu->description }}</p>
+            <img src="{{ asset('storage/menu/' . $menu->img) }}" alt="{{ $menu->nama }}" class="img-fluid mb-3">
+            <p>{{ $menu->desc }}</p>
             <h6>Rp. {{ number_format($menu->price, 0, ',', '.') }}</h6>
           </div>
         </div>
